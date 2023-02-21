@@ -11,8 +11,11 @@ router.get('/all', todoController.getAllToDoItems);
 // create a new to do item
 router.post('/create', todoController.createToDoItem);
 
-// update a to do item
-router.put('/update/:id', todoController.updateToDoItem);
+// update "complete" to a to do item
+router.put('/update/complete/:id', todoController.completeToDoItem);
+
+// update "incomplete" to a to do item
+router.put('/update/incomplete/:id', todoController.incompleteToDoItem);
 
 // delete a to do item
 router.delete('/delete/:id', todoController.deleteToDoItem);
